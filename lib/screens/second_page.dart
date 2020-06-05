@@ -93,7 +93,7 @@ class _SecondPageState extends State<SecondPage> {
                           child: Text(
                             '1h 58m',
                             style: TextStyle(
-                              fontSize: 25,
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -108,7 +108,7 @@ class _SecondPageState extends State<SecondPage> {
                           child: Text(
                             'Action',
                             style: TextStyle(
-                              fontSize: 25,
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -123,7 +123,7 @@ class _SecondPageState extends State<SecondPage> {
                           child: Text(
                             '4,5',
                             style: TextStyle(
-                              fontSize: 25,
+                              fontSize: 17,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -134,9 +134,9 @@ class _SecondPageState extends State<SecondPage> {
                           endIndent: 30,
                         ),
                         Padding(
-                          padding: EdgeInsets.all(8),
+                          padding: EdgeInsets.all(5),
                           child: IconButton(
-                              iconSize: 30,
+                              iconSize: 20,
                               icon: Icon(Icons.bookmark),
                               color: Colors.black,
                               onPressed: () {}),
@@ -145,15 +145,15 @@ class _SecondPageState extends State<SecondPage> {
                     ),
                   ),
                 ),
-                Row(
-                  children: <Widget>[
-                    Container(
-                      height: 5,
-                      width: 5,
-                      color: Colors.white,
-                    )
-                  ],
-                ),
+                // Row(
+                //   children: <Widget>[
+                //     Container(
+                //       height: 5,
+                //       width: 5,
+                //       color: Colors.white,
+                //     )
+                //   ],
+                // ),
                 SizedBox(
                   height: 150,
                 ),

@@ -19,7 +19,7 @@ class Home extends StatefulWidget {
     'images/joker.jpg',
     'images/thor.jpg',
   ];
-  final texts = ['DRIVE', 'MAD  '];
+  final texts = ['DRIVE', 'MAD MAX '];
 
   @override
   _HomeState createState() => _HomeState();
@@ -90,17 +90,18 @@ class _HomeState extends State<Home> {
                             backgroundColor: Colors.white,
                             selectedColor: Color.fromRGBO(253, 10, 76, 1),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(50),
                             ),
                             onSelected: (s) {
                               setState(() => selected = option);
                             },
                             label: Text(
-                              option.toUpperCase(),
+                              option, 
                               style: TextStyle(
+                                fontSize: 10,
                                 color: textColor,
                                 //fontWeight: active ? FontWeight.bold : null,
-                                fontSize: 20,
+                              //  fontSize: 20,
                               ),
                             ),
                           ),
@@ -172,22 +173,23 @@ class _HomeState extends State<Home> {
                                   padding:
                                       const EdgeInsets.only(top: 180, left: 10),
                                   child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.all(5.0),
                                         child: Text(
                                           widget.texts[index],
                                           style: TextStyle(
-                                            fontSize: 40,
+                                            fontSize: 20,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
                                         ),
                                       ),
                                       Text(
-                                        'RyanGosling',
+                                        ' Ryan Gosling',
                                         style: TextStyle(
-                                          fontSize: 20,
+                                          fontSize: 15,
                                           fontWeight: FontWeight.w600,
                                           color: Colors.white,
                                         ),
@@ -205,8 +207,6 @@ class _HomeState extends State<Home> {
                                     data: IconThemeData(
                                         color: Colors.white, size: 20),
                                     child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
                                       children: <Widget>[
                                         Icon(Icons.star),
                                         Icon(Icons.star),
@@ -327,54 +327,45 @@ class _HomeState extends State<Home> {
           ),
         ]),
       ),
-      bottomNavigationBar: Container(
-        height: 50,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(
+            icon: Container(
+              width: 20,
+              height: 17,
+              child: Image.asset(
+                'images/001-film.png',
+                color: Colors.red,
+              ),
+            ),
+            title: Text(''),
           ),
-        ),
-        child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          items: [
-            BottomNavigationBarItem(
-              icon: Container(
-                width: 20,
-                height: 17,
-                child: Image.asset(
-                  'images/001-film.png',
-                  color: Colors.red,
-                ),
-              ),
-              title: Text(''),
+          BottomNavigationBarItem(
+            icon: Container(
+              width: 15,
+              height: 15,
+              child: Image.asset('images/002-fire.png', color: Colors.grey),
             ),
-            BottomNavigationBarItem(
-              icon: Container(
-                width: 15,
-                height: 15,
-                child: Image.asset('images/002-fire.png', color: Colors.grey),
-              ),
-              title: Text(''),
+            title: Text(''),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.bookmark,
+              size: 19,
+              color: Colors.grey,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.bookmark,
-                size: 19,
-                color: Colors.grey,
-              ),
-              title: Text(''),
+            title: Text(''),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
+              color: Colors.grey,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person,
-                color: Colors.grey,
-              ),
-              title: Text(''),
-            ),
-          ],
-          onTap: (index) {},
-        ),
+            title: Text(''),
+          ),
+        ],
+        onTap: (index) {},
       ),
     );
   }
