@@ -145,15 +145,6 @@ class _SecondPageState extends State<SecondPage> {
                     ),
                   ),
                 ),
-                // Row(
-                //   children: <Widget>[
-                //     Container(
-                //       height: 5,
-                //       width: 5,
-                //       color: Colors.white,
-                //     )
-                //   ],
-                // ),
                 SizedBox(
                   height: 150,
                 ),
@@ -228,7 +219,6 @@ class _SecondPageState extends State<SecondPage> {
                     itemCount: widget.stuff.length,
                     itemBuilder: (context, index) {
                       return Container(
-                        //height: 80,
                         margin: EdgeInsets.only(left: 10, right: 5),
                         width: 60,
                         decoration: BoxDecoration(
@@ -245,49 +235,6 @@ class _SecondPageState extends State<SecondPage> {
           ],
         ),
       ),
-      // bottomNavigationBar: ClipRRect(
-      //   borderRadius: BorderRadius.only(
-      //     topLeft: Radius.circular(30),
-      //     topRight: Radius.circular(30),
-      //   ),
-      //   child: BottomNavigationBar(
-      //     type: BottomNavigationBarType.fixed,
-      //     items: [
-      //       BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.movie_creation,
-      //           size: 19,
-      //         ),
-      //         title: Text(''),
-      //       ),
-      //       BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.book,
-      //           size: 19,
-      //           color: Colors.black,
-      //         ),
-      //         title: Text(''),
-      //         backgroundColor: Colors.white,
-      //       ),
-      //       BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.notifications,
-      //           size: 19,
-      //           color: Colors.black,
-      //         ),
-      //         title: Text(''),
-      //       ),
-      //       BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.person_outline,
-      //           color: Colors.black,
-      //         ),
-      //         title: Text(''),
-      //       ),
-      //     ],
-      //     onTap: (index) {},
-      //   ),
-      // ),
     );
   }
 }
